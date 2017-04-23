@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="presenter"
+            type="nyc.c4q.jordansmith.newsreader1.mainActivity.MainPresenter"/>
+
+        </data>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nyc.c4q.jordansmith.newsreader1.mainActivity.MainActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/news_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"/>
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+    </FrameLayout>
+
+    <Button
+        android:onClick="@{() -> presenter.onButtonClicked()}"
+        android:id="@+id/find_news_button"
+        android:layout_gravity="center"
+        android:text="Find News"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+
+
+
+
+</LinearLayout>
+</layout>
+
